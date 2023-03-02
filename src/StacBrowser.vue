@@ -11,11 +11,44 @@
     <!-- Content (Item / Catalog) -->
     <router-view />
     <footer>
-      <i18n tag="small" path="poweredBy" class="poweredby text-muted">
+     <div class="footer__bottom">
+      <div class="portlet-body">
+        <ul class="footer__bottom__links">
+          <li class="footer__bottom__links--signature">European Space Agency</li>
+          <li>
+            <a href="https://sentinels.copernicus.eu/web/sentinel/about-sentinel-online">
+              <span class="text-truncate">About</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://sentinels.copernicus.eu/web/sentinel/terms-conditions">
+              <span class="text-truncate">Terms &amp; Conditions</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://sentinels.copernicus.eu/web/sentinel/faq-link">
+              <span class="text-truncate">FAQ</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:EOSupport@copernicus.esa.int">
+              <span class="text-truncate">Contact us</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://sentinels.copernicus.eu/web/sentinel/help">
+              <span class="text-truncate">Help</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+          <i18n tag="small" path="poweredBy" class="poweredby text-muted">
         <template #link>
           <a href="https://github.com/radiantearth/stac-browser" target="_blank">STAC Browser</a> {{ browserVersion }}
         </template>
       </i18n>
+      <img src="https://sentinels.copernicus.eu/o/sentinel-online-theme/images/copernicus-logo.png" alt="Copernicus logo">
+    </div>
     </footer>
   </b-container>
 </template>
