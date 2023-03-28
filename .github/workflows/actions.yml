@@ -12,11 +12,13 @@ jobs:
           node-version: '14'
       - uses: actions/checkout@v2
       - run: npm install
-      - run: npm run build -- --pathPrefix="/stac-browser" --historyMode=hash
+      - run: npm run build -- --catalogUrl="https://s3.eu-central-2.wasabisys.com/s2-mpc/catalog/catalog.json" --historyMode=hash
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist
           exclude_assets: 'report.html'
           user_name: 'STAC Browser CI'
-          user_email: matthias.mohr@radiant.earth
+          user_email: gaudissart@gmail.com
+          cname: s2gri.csgroup.space
+          enable_jekyll: false
